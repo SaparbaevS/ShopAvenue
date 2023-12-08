@@ -1,0 +1,12 @@
+{% extends 'users/base.html' %}
+
+{% block content %}
+<form action="{% url 'users:register' %}" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Save">
+
+</form>
+<p><a href="{% url 'users:login' %}">Login</a></p>
+<p><a href="{% url 'products:start' %}">Back</a></p>
+{% endblock content %}

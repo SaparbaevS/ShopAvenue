@@ -1,0 +1,21 @@
+{% extends 'shop/product/base.html' %}
+
+{% block content %}
+    <h1>Detail</h1>
+    <h2>Product {{ product.title }}</h2>
+    <img src="{{ product.image.url }}" alt="pain" style="height: 150px;
+    width: 140px;">
+    <h4>{{ product }}</h4>
+    <h4>{{ product.price }}</h4>
+    <h4>{{ product.description }}</h4>
+
+    <br>
+    <p><a href="{% url 'products:update' product.slug %}">Update</a></p>
+    <p><a href="{% url 'products:delete' product.slug %}">Delete</a></p>
+    <br>
+    <a href="{% url 'products:list' %}">Back</a>
+
+
+
+
+{% endblock content %}

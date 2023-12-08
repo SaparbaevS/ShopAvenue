@@ -1,0 +1,1 @@
+[{"model": "products.product", "pk": 8, "fields": {"category": 1, "name": "Pain", "slug": "pain", "image": 

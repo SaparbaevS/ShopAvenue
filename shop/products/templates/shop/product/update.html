@@ -1,0 +1,14 @@
+{% extends 'shop/product/base.html' %}
+
+{% block content %}
+<form action="" method="POST">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" value="Update">
+  <br>
+  <p>
+        <a href="{% url 'products:list' %}">Back</a>
+  </p>
+</form>
+
+{% endblock content %}

@@ -1,0 +1,17 @@
+{% extends 'shop/product/base.html' %}
+{% load static %}
+
+{% block content %}
+    <h1>Товары</h1>
+    <p><a href="{% url 'products:add' %}">Add</a></p>
+    {% for product in products %}
+    <p>{{ product }}</p>
+    <p>
+        <a href="{% url 'products:detail' product.slug %}">Detail</a>
+        <a href="{% url 'products:update' product.slug %}">Update</a>
+        <a href="{% url 'products:delete' product.slug %}">Delete</a>
+    </p>
+    <br>
+    {% endfor %}
+      <a href="{% url 'products:start' %}">Back</a>
+{% endblock content %}
